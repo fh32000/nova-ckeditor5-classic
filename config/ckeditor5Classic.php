@@ -52,6 +52,7 @@ return [
             'alignment:center',
             'alignment:right',
             'alignment:justify',
+            //'alignment',//or in one line
             '|'
         ],
         'table' => [

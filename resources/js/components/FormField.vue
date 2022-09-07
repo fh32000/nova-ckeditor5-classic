@@ -37,26 +37,55 @@ export default {
 
     data () {
         return {
-            containerClass: this.field.options.containerClass ? this.field.options.containerClass : '',
-            editor: ClassicEditor,
-            defaultEditorConfig: {
-                nova: {
-                    resourceName: this.resourceName,
-                    field: this.field,
-                    draftId: uuidv4()
-                },
-                language: this.field.options.language,
-                toolbar: this.field.options.toolbar,
-                heading: this.field.options.heading,
-                image: this.field.options.image,
-                fontFamily: this.field.options.fontFamily,
-                fontSize: this.field.options.fontSize,
-                fontColor: this.field.options.fontColor,
-                link: this.field.options.link,
-                extraPlugins: [
-                  this.createUploadAdapterPlugin
-                ]
-            }
+          containerClass: this.field.options.containerClass ? this.field.options.containerClass : '',
+          direction: this.field.options.direction,
+          language: this.field.options.language,
+          height: 500,
+          editor: ClassicEditor,
+          defaultEditorConfig: {
+            nova: {
+              resourceName: this.resourceName,
+              field: this.field,
+              draftId: uuidv4()
+            },
+            direction: this.field.options.direction,
+            language: this.field.options.language,
+            toolbar: this.field.options.toolbar,
+            heading: this.field.options.heading,
+            image: this.field.options.image,
+            fontFamily: this.field.options.fontFamily,
+            fontSize: this.field.options.fontSize,
+            fontColor: this.field.options.fontColor,
+            fontBackgroundColor: this.field.options.fontBackgroundColor,
+            link: this.field.options.link,
+            highlight: this.field.options.highlight,
+            htmlSupport: this.field.options.htmlSupport,
+            htmlEmbed: this.field.options.htmlEmbed,
+            mention: this.field.options.mention,
+            codeBlock: this.field.options.codeBlock,
+            placeholder: this.field.name,
+            // plugins: [
+            //     EssentialsPlugin,
+            //     AutoformatPlugin,
+            //     BoldPlugin,
+            //     ItalicPlugin,
+            //     BlockQuotePlugin,
+            //     HeadingPlugin,
+            //     ImagePlugin,
+            //     ImageCaptionPlugin,
+            //     ImageStylePlugin,
+            //     ImageToolbarPlugin,
+            //     EasyImagePlugin,
+            //     ImageUploadPlugin,
+            //     LinkPlugin,
+            //     ListPlugin,
+            //     ParagraphPlugin,
+            //     UploadAdapterPlugin
+            // ],
+            extraPlugins: [
+              this.createUploadAdapterPlugin,
+            ]
+          }
         }
     },
 

@@ -50,10 +50,12 @@ export default {
                 heading: this.field.options.heading,
                 image: this.field.options.image,
                 fontFamily: this.field.options.fontFamily,
+                fontSize: this.field.options.fontSize,
+                fontColor: this.field.options.fontColor,
+                link: this.field.options.link,
                 extraPlugins: [
-                    this.createUploadAdapterPlugin
-                ],
-                link: this.field.options.link
+                  this.createUploadAdapterPlugin
+                ]
             }
         }
     },
